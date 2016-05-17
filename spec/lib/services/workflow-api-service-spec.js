@@ -276,6 +276,7 @@ describe('Http.Services.Api.Workflows', function () {
             expect(workflowApiService.createGraph).to.have.been.calledWith(
                 graphDefinition, null, null, null);
             expect(_graph).to.equal(graph);
+            expect(_graph._status).to.equal('running');
             expect(persistStub).to.have.been.calledOnce;
         });
     });
